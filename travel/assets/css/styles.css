@@ -269,7 +269,6 @@ img {
 .home__container {
   position: relative;
   padding: 3rem;
-  row-gap: 3rem;
 }
 
 .home__data {
@@ -299,6 +298,8 @@ img {
 .home__card {
   position: relative;
   overflow: hidden;
+  width: 260px;
+  height: 170px;
 }
 
 .home__card-img {
@@ -311,7 +312,7 @@ img {
   height: 100%;
   top: 0;
   left: 0;
-  background: linear-gradient(180deg, hsla(0, 0%, 0% 0) 50%, hsl(0, 0%, 0%) 125%);
+  background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 50%, hsl(0, 0%, 0%) 125%);
 }
 
 .home__card-title {
@@ -683,7 +684,6 @@ img {
 
 @media screen and (min-width: 576px) {
 
-  .home__container,
   .about__container,
   .explore__content,
   .join__container {
@@ -785,10 +785,8 @@ img {
   }
 
   .home__container {
-    grid-template-columns: initial;
-    justify-content: center;
-    row-gap: 4rem;
     padding-top: 6.5rem;
+    margin-left: 11.8rem
   }
 
   .home__shadow {
@@ -906,4 +904,39 @@ img {
   .scrollup {
     right: 3rem;
   }
+
+  .swiper-slide{
+    width: 260px;
+    height: 170px;
+  }
 }
+
+.small{
+  color: rgb(9 151 15);
+}
+
+.swiper-pagination {
+  position: relative;
+  bottom: -0.313rem;
+  text-align: center;
+  margin-top: 35px;
+  width: auto;
+}
+
+.swiper-pagination-bullet {
+  border-radius: 0;
+  width: 1.5rem;
+  height: 0.25rem;
+  background: rgb(175, 170, 170);
+}
+
+.swiper-pagination-bullet-active {
+  background: white;
+}
+
+/* .swiper-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+} */

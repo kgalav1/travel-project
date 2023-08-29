@@ -78,13 +78,60 @@ window.addEventListener('scroll', scrollActive)
 const sr = ScrollReveal({
     origin: 'top',
     distance: '60px',
-    duration: 3000,
-    delay: 400,
+    duration: 2000,
+    delay: 200,
     // reset ture // Animation repeat
 });
 
 sr.reveal(`.home__data, .explore__data, .explore__user, .footer__container`);
-sr.reveal(`.home__card`, { delay: 600, distance: '100px', interval: 100 });
+// sr.reveal(`.home__card`, { delay: 600, distance: '100px', interval: 100 });
 sr.reveal(`.about__data, .join__image`, { origin: 'right' });
 sr.reveal(`.about__image, .join__data`, { origin: 'left' });
 sr.reveal(`.popular__card`, { interval: 200 });
+
+
+
+/*=============== SWIPER HORIZONTAL SCROLL ANIMATION ===============*/
+
+var swiper = new Swiper(".swiper", {
+    autoplay: {
+        delay: 2000,
+    },
+    effect: "coverflow",
+    grabCursor: true,
+    spaceBetween: 30,
+    centeredSlides: false,
+    centerInsufficientSlides: false,
+    coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 0,
+        modifier: 1,
+        slideShadows: false
+    },
+    // loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+    },
+    keyboard: {
+        enabled: true
+    },
+    mousewheel: {
+        thresholdDelta: 70
+    },
+    breakpoints: {
+        460: {
+            slidesPerView: 1
+        },
+        768: {
+            slidesPerView: 1
+        },
+        1024: {
+            slidesPerView: 4
+        },
+        1600: {
+            slidesPerView: 4
+        }
+    }
+});
